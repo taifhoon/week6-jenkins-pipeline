@@ -4,7 +4,7 @@ pipeline {
          stage('pre -build') {
             steps {
                 sh 'echo Pre-build'
-                sh 'python3 --version'
+                sh 'python3 -version'
             }
         }
         stage('build') {
