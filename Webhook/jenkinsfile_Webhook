@@ -9,10 +9,27 @@ pipeline {
         }
         stage('build') {
             steps {
-                
                 echo 'build in progress'
                 sh 'python3  Webhook/main.py'
             }
         }
+        stage('recoding') {
+            steps {
+                echo 'new coding'
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'Deploy in progress'
+            }
+        }
+    }
+    post {
+         success {
+               echo 'bulid success' 
+         }
+         failure {
+               echo 'bulid failure'
+         }
     }
 }
